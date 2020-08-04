@@ -1,0 +1,14 @@
+          </td>
+      </tr>
+      <tr class="table">
+          <td colspan="2" style="background: #f5f5f5" align="center" height="50px" >
+		  <form method="post" action="saveconfig">
+		  <input type="submit" value="保存配置" class="buttonstyle" />
+		  <input type="reset" value="不保存配置" class="buttonstyle" />
+		  </form>
+		  </td>
+      </tr>
+  </table>
+
+</body>
+</html>

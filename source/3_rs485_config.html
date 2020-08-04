@@ -1,0 +1,63 @@
+<!DOCTYPE html> 
+<html >
+<head>
+<meta charset="utf-8">
+<title>智能网关配置</title>
+</head>
+<style>
+    .decor{
+        width: 6px;
+        height: 16px;
+        background-color: #108cee;
+        float: left;
+        margin: 3px 6px 0px 5px;
+    }
+    .h3{
+        font-size: 16px;
+        font-weight: 600;
+        color: #108cee;
+    }
+    .table input{
+        background-color: #108cee;
+        border: none;
+        color: #fff;
+        height: 30px;
+        width: 100px;
+    }
+    hr{
+        border: 1px solid #e5e5e5;
+    }
+    .margin{
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+</style>
+<body>
+  <table border="1" cellspacing="1" cellpadding="1" align="center">
+      <tr>
+          <td colspan="2" align="center"  style="background:#f5f5f5; font-size: 18px;" >配置信息</td>
+      </tr>
+      <tr>
+          <td style="background: #108cee" align="center" height="400px" width="100px">
+
+			  <a href="local_config"><input type="reset" value="本 机 配 置" class="buttonstyle" /></a><br><br>
+			  <a href="rs232_config"><input type="reset" value="RS323配置" class="buttonstyle" /></a><br><br>
+			  <a href="rs485_config"><input type="reset" value="RS485配置" class="buttonstyle" /></a>
+          </td>
+          <td style="background: white" align="leftwards" width="600px">
+		  <form  method="post">
+				
+<div><div class='decor'></div><label class='h3'' > RS485配置</label ></div><div><div class='decor'></div><label class='h3'' >串口配置 </label ></div><div class='margin'> 波特率：<input type='text' name='baud_rate'  placeholder='115200'> (600~230400)bps </div><div class='margin'> 数据位：<select name='data_bits'> <option value='8'></option><option value='0'>1</option><option value='1'>2</option><option value='2'>3</option> <option value='3'>4</option> <option value='4'>5</option><option value='2'>6</option> <option value='3'>7</option><option value='4'>8</option></select></div><div class='margin'> 校验位: <select name='parity_bit'><option value='1'></option> <option value='0'>None</option><option value='1'>ON</option> </select></div><div class='margin'> 停止位：<select name='stop_bits'> <option value='1'></option><option value='0'>1</option><option value='1'>2</option><option value='2'>3</option> <option value='3'>4</option> <option value='4'>5</option><option value='2'>6</option> <option value='3'>7</option><option value='4'>8</option></select></div><div class='margin'> 流控: <select name='parity_bit'><option value='1'></option> <option value='0'>None</option><option value='1'>RTS/CTS</option> <option value='1'>Xon/Xoff</option></select></div><div class='margin'> 串口打包时间：<input type='text' name='serial_packing_time'  placeholder='20'> ms</div><div class='margin'> 串口打包长度：<input type='text' name='serial_packing_lenth'  placeholder='100'> chars </div><label><input class='margin' name='syn_paud' type='checkbox' lay-verify='required' value='1' />同步波特率（2217） </label> <label><input class='margin' name='enable_serial_hb' type='checkbox' lay-verify='required' value='10' />使能串口心跳包 </label> <hr> <div><div class='decor'></div><label class='h3'' >网络配置 </label ></div><div class='margin'> 服务器IP：<input type='text' name='remode_ser_ip'  placeholder='192.168.0.1'> </div><div class='margin'> 本地端口：<input type='text' name='local_port'  placeholder='23'> </div><div class='margin'> 网络工作模式: <select name='net_mode'><option value='2'></option> <option value='0'>Tcp_client</option><option value='1'>Tcp_server</option> <option value='1'>Udp_client</option><option value='1'>Udp_server</option><option value='1'>Http_client</option></select></div><label><input class='margin' name='modbus_tcp_poll' type='checkbox' lay-verify='required' value='1' />使能串口心跳包 </label>           </td>
+      </tr>
+      <tr class="table">
+          <td colspan="2" style="background: #f5f5f5" align="center" height="50px" >
+		  <form method="post" action="saveconfig">
+		  <input type="submit" value="保存配置" class="buttonstyle" />
+		  <input type="reset" value="不保存配置" class="buttonstyle" />
+		  </form>
+		  </td>
+      </tr>
+  </table>
+
+</body>
+</html></html>
